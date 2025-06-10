@@ -7,8 +7,6 @@ Diamond like stracture
     * 
 for the every row the it should be return the odd number for this one
 */
-
-
 function uppertriangle(n){
         for (let row = 1; row <= n; row += 1) {
             //task -- <some spaces><some starts>
@@ -29,9 +27,6 @@ function uppertriangle(n){
                 console.log(str);
         }
 }
-pattern3(5)
-
-
 function lowertriangle(n){
     // the lower triangle consist of only n - 1 rows
     for(let row = 1; row <= n - 1; row += 1){
@@ -41,13 +36,20 @@ function lowertriangle(n){
         for (let j = 1; j <= spaces; j += 1){
             str  += " ";
         }
-
         // for every row, when you increase the row number we decrease no of stars.
         // by observation we get 2*(n - row)
         let stars = 2*(n - row) - 1;
-       
+        for (let k = 1; k <= stars; k += 1){
+            str += "*"
+        }
+        console.log(str)
     }
 }
+function pattern(n){
+    uppertriangle(n);
+    lowertriangle(n);
+}
 
+pattern(5)
 
 
